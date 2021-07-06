@@ -58,7 +58,7 @@ For Target, use the name of the directory in your PAL:DataDir (the Data director
   %SystemDrive%
 ```
   
- Use them like you would if you were using DirectoriesMove. Documentation [here](https://portableapps.com/manuals/PortableApps.comLauncher/ref/envsub.html)
+ Use them like you would if you were using DirectoriesMove. Documentation [here](https://portableapps.com/manuals/PortableApps.comLauncher/ref/envsub.html).
   
  I also added two more varibles that I thought would be useful:
 ```
@@ -102,7 +102,7 @@ Target=User Data
   # Licence
 Feel free to use this in your portable apps however you like.  
 I would appreciate a credit if you feel so inclined.  
-My PortableApps.com forum username is https://portableapps.com/user/303068  
+My PortableApps.com forum username is https://portableapps.com/user/303068.
   
   
   
