@@ -16,7 +16,7 @@ I actually experienced this several times. Besides data-safety, using my script 
 # Disadvantages
 Applications using this script can only be run from NTFS-formatted drive so putting them on FAT32 flash drives (the main use case for PApps) is not possible as that filesystem doesn't support symbolic links.
 
-⚠️Administrator privileges are also required for the creation of symbolic links so be sure to enable the RunAsAdmin=compile-force flag in your appname.ini PRIOR to recompiling.
+⚠️Administrator privileges are also required for the creation of symbolic links so be sure to enable the RunAsAdmin=compile-force flag in your appname.ini PRIOR to recompiling. This will trigger UAC every time the app is run which can be annoying. I personally always disable UAC so that's not a problem for me but it might be for you. This also means that you can't run the application in an environment where you don't have administrator privileges. 
 
 
 # Usage
