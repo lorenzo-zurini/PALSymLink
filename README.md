@@ -65,8 +65,15 @@ For Target, use the name of the directory in your PAL:DataDir (the Data director
   %AppDataLocalLow% - translates to %UserProfile%\AppData\LocalLow
   %ProgramData% - translates to %SystemDrive%\ProgramData (same as %AllUsersProfile%).
 ```
-  # Example
+  # Example appname.ini:
 ```
+[Launch]
+Name=appname
+ProgramExecutable=appdir\appexe.exe
+DirectoryMoveOK=yes
+WorkingDirectory=%PAL:AppDir%\appdir
+runasadmin=compile-force        ⚠️
+
 [SymLinkRedirect1]
 Path=%PAL:AppDir%\Config
 Target=Configs
