@@ -82,6 +82,23 @@ Target=Configs
 Path=%AppData%\AppName
 Target=User Data
 ```
+ # Resolution Wildcards
+ I have made a lot of portable videogames using PortableApps launchers and a lot of them need to habe the display resolution written somewhere in their config files or in the registry. However, PA does not provide a way of obtaining these values so I added it to this script. It automatically obtains the dimensions of the main display and processes them in several ways resulting in the following environment variables:
+ ```
+ The values below are for a resolution of 1920x1080:
+ ScreenWidth - the width of the screen (1920)
+ ScreenWidthHEX - the width of the screen in hex (80,07)
+ ScreenWidthDWORD - the width of the screen formatted to %08x (00000780)
+ ScreenHeight - the height of the screen (1080)
+ ScreenHeightHEX - the height of the screen in hex (38,04)
+ ScreenHeightDWORD - the height of the screen formatted to %08x (00000438)
+ AspectRatio - the aspect ratio of the screen x 1000 (177)
+ AspectRatioDWORD - the aspect ratio in a %08x format (000000b1)
+ ScreenWidth43 -  the width of the screen if the aspect ratio were 4:3 (1440)
+ ScreenWidth43DWORD - the same but formatted to %08x (000005a0)
+ ```
+ Use them with [FileWriteN] to edit the resolutions in the configs programatically. The hex ones are usually used in the registry by old games/apps.
+
   # Licence
 Feel free to use this in your portable apps however you like.  
 I would appreciate a credit if you feel so inclined.  
