@@ -53,9 +53,8 @@ For Target, use the name of the directory in your PAL:DataDir (the Data director
  I also added two more varibles that I thought would be useful:
 ```
   %AppDataLocalLow% - translates to %UserProfile%\AppData\LocalLow
-  %ProgramData% - translates to %SystemDrive%\ProgramData (same as %AllUsersProfile% because i find that confusing).
+  %ProgramData% - translates to %SystemDrive%\ProgramData (same as %AllUsersProfile%).
 ```
-  
   # Example
 ```
 [SymLinkRedirect1]
