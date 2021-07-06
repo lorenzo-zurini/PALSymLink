@@ -16,10 +16,18 @@ I actually experienced this several times. Besides data-safety, using my script 
 # Disadvantages
 Applications using this script can only be run from NTFS-formatted drive so putting them on FAT32 flash drives (the main use case for PApps) is not possible as that filesystem doesn't support symbolic links.
 
+⚠️Administrator privileges are also required for the creation of symbolic links so be sure to enable the RunAsAdmin=compile-force flag in your <appname>.ini PRIOR to recompiling.
+
 
 # Usage
-1. Download Custom.nsh from this repo and put it in your Appinfo>Launcher directory, next to the <appname>.ini file and recompile the portable application using the Portableapps Launcher Generator.
-2. In your <appname>.ini file, create the following section for each symbolic link that you want to make:
+1. Download Custom.nsh from this repo and put it in your Appinfo>Launcher directory, next to the <appname>.ini file.
+2. Be sure to enable administrator privileges flag in your <appname>.ini. This can be done by adding the following line in the [Launch] section of the file.
+ ```
+ RunAsAdmin=compile-force
+ ```
+3. Recompile the portable application using the Portableapps Launcher Generator. This can be done by downloading [this](https://portableapps.com/apps/development/portableapps.com_launcher) , installing it somewhere and drag-and-dropping the directory containing the application (the one that contains the App and Data dirs) that you want to make portable to PortableApps.comLauncherGenerator.exe
+ 
+4. In your <appname>.ini file, create the following section for each symbolic link that you want to make:
 
 ```
 [SymLinkRedirectN]
@@ -33,6 +41,8 @@ Target=
 For Path, use the path where the symbolic link wil be located. This is the path of the directory that you want to make portable, the path that you would put on the RIGHT side of the "=" if you were using DirectoriesMove. Most wilidcards from PA are supported (more below). The DirectoriesCleanupIfEmpty section is also replicated by my script and should be left empty (if you aren't using DirectoriesMove as well). The parent directories of the SymLink will be recursively removed if they are empty. If there is already a directory at this path, it will be renamed when the app is run and renamed back when it is closed.
 
 For Target, use the name of the directory in your PAL:DataDir (the Data directory that is created after the app is run) that the symbolic link will point to. This is the path that you would put on the LEFT if you were using DirectoriesMove. If this directory doesn't already exist (like if you put it in DefaultData), it will be automatically created.
+ 
+ 5. Run the app and see if it works. Be aware that it will not run from a non-NTFS formatted drive as other filesystems like FAT32 don't support Symbolic Links.
   
  # Wildcards
   
@@ -48,7 +58,7 @@ For Target, use the name of the directory in your PAL:DataDir (the Data director
   %SystemDrive%
 ```
   
- Use them like you would if you were using DirectoriesMove. Documentation here https://portableapps.com/manuals/PortableApps.comLauncher/ref/envsub.html
+ Use them like you would if you were using DirectoriesMove. Documentation [here](https://portableapps.com/manuals/PortableApps.comLauncher/ref/envsub.html)
   
  I also added two more varibles that I thought would be useful:
 ```
