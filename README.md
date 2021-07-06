@@ -25,7 +25,7 @@ Applications using this script can only be run from NTFS-formatted drive so putt
  ```
  RunAsAdmin=compile-force
  ```
-3. Recompile the portable application using the Portableapps Launcher Generator. This can be done by downloading [this](https://portableapps.com/apps/development/portableapps.com_launcher) , installing it somewhere and drag-and-dropping the directory containing the application (the one that contains the App and Data dirs) that you want to make portable to PortableApps.comLauncherGenerator.exe
+3. Recompile the portable application using the Portableapps Launcher Generator. This can be done by downloading [this](https://portableapps.com/apps/development/portableapps.com_launcher), installing it somewhere and drag-and-dropping the directory containing the application (the one that contains the App and Data dirs) that you want to make portable to PortableApps.comLauncherGenerator.exe
  
 4. In your appname.ini file, create the following section for each symbolic link that you want to make:
 
@@ -83,7 +83,7 @@ Path=%AppData%\AppName
 Target=User Data
 ```
  # Resolution Wildcards
- I have made a lot of portable videogames using PortableApps launchers and a lot of them need to habe the display resolution written somewhere in their config files or in the registry. However, PA does not provide a way of obtaining these values so I added it to this script. It automatically obtains the dimensions of the main display and processes them in several ways resulting in the following environment variables:
+ I have made a lot of portable videogames using PortableApps launchers and a lot of them need to have the display resolution written somewhere in their config files or in the registry. However, PA does not provide a way of obtaining these values so I added it to this script. It automatically obtains the dimensions of the main display and processes them in several ways resulting in the following environment variables:
  ```
  The values below are for a resolution of 1920x1080:
  ScreenWidth - the width of the screen (1920)
