@@ -101,7 +101,7 @@ IntFmt $sw43dword "%08x" $4
     ${SetEnvironmentVariable} ScreenWidth $0
     ${SetEnvironmentVariable} ScreenHeight  $1
 	${SetEnvironmentVariable} AspectRatio $ratiowh
-	${SetEnvironmentVariable} AspectRatioHEX $ratiowhhex
+	${SetEnvironmentVariable} AspectRatioDWORD $ratiowhhex
 	${SetEnvironmentVariable} ScreenWidth43  $4
 	${SetEnvironmentVariable} ScreenWidth43DWORD  $sw43dword
 	${SetEnvironmentVariable} ScreenWidthHEX  $9
