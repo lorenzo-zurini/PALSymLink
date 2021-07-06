@@ -1,2 +1,2 @@
-# PalSymLink
+# PALSymLink
 PAL Symlink
