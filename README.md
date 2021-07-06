@@ -99,7 +99,7 @@ Target=User Data
  ```
  Use them with [FileWriteN] to edit the resolutions in the configs programatically. The hex ones are usually used in the registry by old games/apps.
 
-  # Licence
+  # License
 Feel free to use this in your portable apps however you like.  
 I would appreciate a credit if you feel so inclined.  
 My PortableApps.com forum username is https://portableapps.com/user/303068.
