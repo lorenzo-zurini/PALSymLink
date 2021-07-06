@@ -68,10 +68,10 @@ For Target, use the name of the directory in your PAL:DataDir (the Data director
   # Example appname.ini:
 ```
 [Launch]
-Name=appname
-ProgramExecutable=appdir\appexe.exe
+Name=AppName
+ProgramExecutable=AppDir\appexe.exe
 DirectoryMoveOK=yes
-WorkingDirectory=%PAL:AppDir%\appdir
+WorkingDirectory=%PAL:AppDir%\AppDir
 runasadmin=compile-force        ⚠️
 
 [SymLinkRedirect1]
