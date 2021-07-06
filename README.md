@@ -16,18 +16,18 @@ I actually experienced this several times. Besides data-safety, using my script 
 # Disadvantages
 Applications using this script can only be run from NTFS-formatted drive so putting them on FAT32 flash drives (the main use case for PApps) is not possible as that filesystem doesn't support symbolic links.
 
-⚠️Administrator privileges are also required for the creation of symbolic links so be sure to enable the RunAsAdmin=compile-force flag in your <appname>.ini PRIOR to recompiling.
+⚠️Administrator privileges are also required for the creation of symbolic links so be sure to enable the RunAsAdmin=compile-force flag in your appname.ini PRIOR to recompiling.
 
 
 # Usage
-1. Download Custom.nsh from this repo and put it in your Appinfo>Launcher directory, next to the <appname>.ini file.
-2. Be sure to enable administrator privileges flag in your <appname>.ini. This can be done by adding the following line in the [Launch] section of the file.
+1. Download Custom.nsh from this repo and put it in your Appinfo>Launcher directory, next to the appname.ini file.
+2. Be sure to enable administrator privileges flag in your appname.ini. This can be done by adding the following line in the [Launch] section of the file.
  ```
  RunAsAdmin=compile-force
  ```
 3. Recompile the portable application using the Portableapps Launcher Generator. This can be done by downloading [this](https://portableapps.com/apps/development/portableapps.com_launcher) , installing it somewhere and drag-and-dropping the directory containing the application (the one that contains the App and Data dirs) that you want to make portable to PortableApps.comLauncherGenerator.exe
  
-4. In your <appname>.ini file, create the following section for each symbolic link that you want to make:
+4. In your appname.ini file, create the following section for each symbolic link that you want to make:
 
 ```
 [SymLinkRedirectN]
